@@ -1,4 +1,4 @@
-# BIONF593 Final Project
+# Adapting CoSTA to Visium Spatial Transcriptomics Data
 
 ## Setting up the env
 
