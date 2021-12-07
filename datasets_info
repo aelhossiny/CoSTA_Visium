@@ -1,0 +1,77 @@
+############################################################
+Human Prostate Cancer, Acinar Cell Carcinoma (FFPE)
+Spatial Gene Expression Dataset by Space Ranger 1.3.0
+5µm section from Acinar cell carcinoma of human prostate. FFPE tissue purchased from Indivumed Human Tissue Specimens (Indivumed).
+
+Block 1D1061-Tp11 Section 1
+Stage IV
+Total Gleason score: 7
+Magnification: 20x
+Libraries were prepared following the Visium Spatial Gene Expression Reagent Kits for FFPE User Guide (CG000407 Rev A).
+
+Sequenced on Illumina NovaSeq with approximately 50,207 reads per spot, dual index set SI-TS-B8, 28bp read 1 (16bp Visium spatial barcode, 12bp UMI), 50bp read2 (transcript), 10bp i7 sample barcode and 10bp i5 sample barcode.
+
+FASTQ data were analyzed with Space Ranger 1.3. 3,043 spots detected under tissue. Annotated with Invasive Carcinoma.
+
+https://www.10xgenomics.com/resources/datasets/human-prostate-cancer-acinar-cell-carcinoma-ffpe-1-standard
+###########################################################
+
+Human Prostate Cancer, Adenocarcinoma with Invasive Carcinoma (FFPE)
+Spatial Gene Expression Dataset by Space Ranger 1.3.0
+5 µm section from Adenocarcinoma of Human Prostate. FFPE tissue purchased from Indivumed Human Tissue Specimens (Indivumed).
+
+Block 1E500_Tp12 Section 1
+Stage III
+Total Gleason score: 7
+Sex: Male
+20x magnification
+Libraries were prepared following the Visium Spatial Gene Expression Reagent Kits for FFPE User Guide (CG000407 Rev A).
+
+Libraries were sequenced on Illumina NovaSeq with approximately 22,964 reads per spot, dual index set SI-TS-F8, 28bp read 1 (16bp Visium spatial barcode, 12bp UMI), 50bp read2 (transcript), 10bp i7 sample barcode and 10bp i5 sample barcode.
+
+FASTQ data were analyzed with Space Ranger 1.3. 4371 spots were detected under tissue. Annotated with Adenocarcinoma, Invasive Carcinoma.
+
+https://www.10xgenomics.com/resources/datasets/human-prostate-cancer-adenocarcinoma-with-invasive-carcinoma-ffpe-1-standard-1-3-0
+
+############################################################
+
+Human Prostate Cancer, Adjacent Normal Section with IF staining (FFPE)
+Spatial Gene Expression Dataset by Space Ranger 1.3.0
+10µm section from Adenocarcinoma of Human Prostate. FFPE tissue purchased from Indivumed Human Tissue Specimens (Indivumed). Original diagnosis with adenocarcinoma.
+
+Block 1E333_Tp11 Section 1
+Stage II
+Total Gleason score: 7
+Sex: Male
+Antibodies used for immunofluorescence (IF) staining:
+
+Channel 1 = 1:100 Iba1/AIF-1 (Cell Signalling, Cat. No. 36618S)
+Channel 2 = 1:100 Vimentin (Cell Signalling, Cat. No. 9856S)
+Channel 3 = 1:5000 DAPI (Thermo Scientific, Cat. No. 62248)
+Blocking buffer: 1X PBS; 2% BSA; 0.1% Tween 20; 1 U/uL Roche Protector RNase Inhibitor (based on CoA)
+Libraries were prepared following the Visium Spatial Gene Expression Reagent Kits for FFPE User Guide (CG000407 Rev A).
+
+Sequenced on Illumina NovaSeq with dual index set SI-TS-D4, approximately 29,191 reads per spot. 28bp read 1 (16bp Visium spatial barcode, 12bp UMI), 50bp read2 (transcript), 10bp i7 sample barcode and 10bp i5 sample barcode.
+
+FASTQ data were analyzed with Space Ranger 1.3. 3460 spots were detected under tissue using manual Loupe alignment.
+
+https://www.10xgenomics.com/resources/datasets/human-prostate-cancer-adjacent-normal-section-with-if-staining-ffpe-1-standard-1-3-0
+
+#############################################################
+
+Normal Human Prostate (FFPE)
+Spatial Gene Expression Dataset by Space Ranger 1.3.0
+5 µm section from human prostate. FFPE tissue purchased from Indivumed Human Tissue Specimens (Indivumed).
+
+Block 1E333_Tn17
+Sex: Male
+Magnification: 20x
+Libraries were prepared following the Visium Spatial Gene Expression Reagent Kits for FFPE User Guide (CG000407 Rev A).
+
+Sequenced on Illumina NovaSeq with dual index set SI-TS-D2, approximately 27,893 reads per spot, 28bp read 1 (16bp Visium spatial barcode, 12bp UMI), 50bp read2 (transcript), 10bp i7 sample barcode and 10bp i5 sample barcode.
+
+FASTQ data were analyzed with Space Ranger 1.3. 2539 spots detected under tissue.
+
+https://www.10xgenomics.com/resources/datasets/normal-human-prostate-ffpe-1-standard-1-3-0
+
+##########################################################

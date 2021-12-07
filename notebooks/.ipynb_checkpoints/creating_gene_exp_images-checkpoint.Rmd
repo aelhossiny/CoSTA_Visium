@@ -1,0 +1,97 @@
+---
+title: "Converting Visium Dataset into gene expression images"
+output: html_notebook
+---
+
+This vignette "[Seurat Visium Data Analysis](https://satijalab.org/seurat/articles/spatial_vignette.html)" shows how to use Seurat package in analyzing Visium dataset and creating feature plot, which we are going to use to create gene expression images (arrays), which will be used as an input for our model training.
+
+#Loading libraries
+```{r}
+library(Seurat)
+library(ggplot2)
+library(patchwork)
+library(dplyr)
+```
+
+#Loading sample
+```{r}
+normal <- Load10X_Spatial(data.dir = "../datasets/normal/", filename = "Visium_FFPE_Human_Normal_Prostate_filtered_feature_bc_matrix.h5")
+```
+
+
+#Normalizing sample
+```{r}
+normal <- SCTransform(normal, assay = "Spatial", verbose = FALSE)
+```
+
+
+#Feature plot (w black BG and gray expression scale)
+```{r}
+SpatialFeaturePlot(
+  normal,
+  features = "TP53",
+  slot = "data",
+  ncol = NULL,
+  pt.size.factor = 2,
+  alpha = c(1, 1),
+  image.alpha = 0,
+  stroke = 0
+) + 
+  scale_fill_continuous(low = "black",high = "white") + 
+  theme(plot.background = element_rect(fill = 'black'),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank()) +
+  NoLegend()
+```
+
+#Comparing original feature plot with the modified one
+```{r}
+cowplot::plot_grid(
+SpatialFeaturePlot(
+  normal,
+  features = "TP53",
+  slot = "data",
+  ncol = NULL,
+  pt.size.factor = 1.6,
+  alpha = c(1, 1),
+  image.alpha = 1,
+  stroke = 0
+),
+SpatialFeaturePlot(
+  normal,
+  features = "TP53",
+  slot = "data",
+  ncol = NULL,
+  pt.size.factor = 1.6,
+  alpha = c(1, 1),
+  image.alpha = 0,
+  stroke = 0
+) + 
+  scale_fill_continuous(low = "black",high = "white") + 
+  theme(plot.background = element_rect(fill = 'black'),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank()) +
+  NoLegend())
+```
+
+We've created `create_gene_exp_img` function in `utils.R` script to create images for all genes of a specific input dataset
+
+# Creating gene expression images for all datasets
+
+```{r}
+source("utils.R")
+
+datasets_names <- list.files("../datasets/")
+dataset_dir <- list.files("/nfs/turbo/dcmb-class/bioinf593/sec001/hossiny/Bioinf593_project/datasets", full.names = T)
+
+for (i in 1:length(datasets_names)){
+  cat(paste0("::::: Processing ", datasets_names[i], " Dataset :::::\n"))
+  input_dir <- dataset_dir[i]
+  dir.create(paste0("/nfs/turbo/dcmb-class/bioinf593/sec001/hossiny/Bioinf593_project/results/GeneExpImgs/",datasets_names[i]), showWarnings = FALSE)
+  output_dir <- paste0("/nfs/turbo/dcmb-class/bioinf593/sec001/hossiny/Bioinf593_project/results/GeneExpImgs/",datasets_names[i])
+  create_gene_exp_image(input_dir = input_dir, output_dir = output_dir)
+}
+```
+

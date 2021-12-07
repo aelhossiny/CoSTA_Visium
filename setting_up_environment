@@ -1,0 +1,8 @@
+module load python3.8-anaconda/2020.07 
+conda create -n bioinf593_project python=3.8 numpy scipy pandas scikit-learn pytorch jupyterlab jupyter
+conda activate bioinf593_project
+pip install NaiveDE
+pip install opencv-python
+pip install patsy
+pip install seaborn
+pip install vit-pytorch
